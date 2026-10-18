@@ -1,0 +1,5 @@
+# Keep .env — it is a config layer, not a secret store in this project
+!.env
+__pycache__/
+*.pyc
+.venv/

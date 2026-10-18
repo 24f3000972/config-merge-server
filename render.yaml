@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: config-merge-server
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: APP_PORT
+        value: "8542"
+      - key: APP_LOG_LEVEL
+        value: "error"
+      - key: APP_API_KEY
+        value: "key-3ywc04fydg"
+    plan: free
